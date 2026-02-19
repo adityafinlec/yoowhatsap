@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>विमा दिशा | मराठी इन्शुरन्स शिक्षण पोर्टल</title>
+  <meta name="description" content="वाहन, आरोग्य, टर्म आणि जनरल विम्याबद्दल मराठीत मार्गदर्शक लेख, कॅलक्युलेटर, तुलना साधन आणि उपयोगी संकल्पना." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero" id="home">
+    <nav class="top-nav container">
+      <a href="#home" class="brand">विमा दिशा</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+      <ul id="navLinks">
+        <li><a href="#types">विमा प्रकार</a></li>
+        <li><a href="#concepts">संकल्पना</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#blog">ब्लॉग</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content container">
+      <p class="tag">मराठी वाचकांसाठी insurance made simple</p>
+      <h1>योग्य विमा निवडा — समजून, तुलना करून, आत्मविश्वासाने</h1>
+      <p>
+        आता फक्त माहिती नाही, तर प्रत्यक्ष मदत: विमा संकल्पना, पॉलिसी तुलना,
+        सम इन्शुअर्ड सुचवणी, प्रीमियम अंदाज आणि FAQ — सगळं एका इंटरॅक्टिव्ह पोर्टलमध्ये.
+      </p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#tools">साधने वापरा</a>
+        <a class="btn secondary" href="#blog">मार्गदर्शक लेख</a>
+      </div>
+      <div class="hero-stats" id="heroStats"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section container" id="types">
+      <div class="section-head">
+        <h2>विमा प्रकार आणि सखोल माहिती</h2>
+        <p class="section-intro">प्रत्येक प्रकारासाठी कव्हरेज, फायदे, मर्यादा आणि कोणासाठी योग्य आहे हे पहा.</p>
+      </div>
+      <div class="type-tabs" id="typeTabs"></div>
+      <article class="type-detail card" id="typeDetail"></article>
+    </section>
+
+    <section class="section alt" id="concepts">
+      <div class="container">
+        <div class="section-head">
+          <h2>इन्शुरन्स Glossary (मराठीत)</h2>
+          <p class="section-intro">टर्म शोधा आणि 1 ओळीत स्पष्ट अर्थ मिळवा.</p>
+        </div>
+        <div class="search-wrap">
+          <input type="search" id="termSearch" placeholder="उदा. Sum Insured, NCB, Cashless" aria-label="Insurance term search" />
+          <span id="resultCount"></span>
+        </div>
+        <div class="glossary" id="glossaryList"></div>
+      </div>
+    </section>
+
+    <section class="section container" id="tools">
+      <div class="section-head">
+        <h2>इंटरॅक्टिव्ह साधने</h2>
+        <p class="section-intro">खरेदीपूर्वी निर्णय घेण्यासाठी उपयोगी calculators आणि comparison tools.</p>
+      </div>
+
+      <div class="tool-grid">
+        <article class="card tool-card">
+          <h3>Health Sum Insured सुचवणी</h3>
+          <p>वय, शहर आणि कुटुंबाचा आकार यावर बेसिक सुचवणी.</p>
+          <form id="healthForm" class="stack">
+            <label>वय
+              <input type="number" id="age" min="18" max="80" required />
+            </label>
+            <label>शहर प्रकार
+              <select id="cityTier" required>
+                <option value="">निवडा</option>
+                <option value="metro">मेट्रो</option>
+                <option value="tier2">टियर-2</option>
+                <option value="tier3">टियर-3</option>
+              </select>
+            </label>
+            <label>कुटुंबातील सदस्य
+              <input type="number" id="familyMembers" min="1" max="10" required />
+            </label>
+            <button class="btn primary" type="submit">सुचवणी पहा</button>
+          </form>
+          <p class="tool-output" id="healthOutput">—</p>
+        </article>
+
+        <article class="card tool-card">
+          <h3>Vehicle Policy तुलना</h3>
+          <p>Third-party आणि Comprehensive मधला फरक झटपट समजा.</p>
+          <form id="vehicleForm" class="stack">
+            <label>वाहनाची अंदाजे किंमत (₹)
+              <input type="number" id="vehicleValue" min="50000" step="10000" required />
+            </label>
+            <label>वाहन वय (वर्षे)
+              <input type="number" id="vehicleAge" min="0" max="20" required />
+            </label>
+            <button class="btn primary" type="submit">तुलना पहा</button>
+          </form>
+          <div class="compare" id="vehicleCompare"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt" id="blog">
+      <div class="container">
+        <div class="section-head">
+          <h2>ब्लॉग आणि मार्गदर्शक</h2>
+          <p class="section-intro">विषयानुसार लेख फिल्टर करा आणि वाचायला सोपे सारांश पहा.</p>
+        </div>
+        <div class="filter-row" id="blogFilters"></div>
+        <div class="card-grid blog-grid" id="blogGrid"></div>
+      </div>
+    </section>
+
+    <section class="section container" id="faq">
+      <div class="section-head">
+        <h2>सामान्य प्रश्न</h2>
+        <p class="section-intro">तुमचा प्रश्न निवडा — उत्तर लगेच दिसेल.</p>
+      </div>
+      <div id="faqList" class="faq-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>© 2026 विमा दिशा. मराठी भाषेत विश्वसनीय विमा शिक्षण.</p>
+      <p>तुम्हाला कुठला insurance term हवा असेल तर पुढील आवृत्तीत आम्ही add करू.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
