@@ -1,0 +1,9 @@
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="700" fill="#F8FAFC"/>
+  <path d="M610 120L860 210V360C860 500 760 590 610 640C460 590 360 500 360 360V210L610 120Z" fill="#DBEAFE" stroke="#2563EB" stroke-width="18"/>
+  <circle cx="540" cy="330" r="42" fill="#1E3A8A"/>
+  <circle cx="680" cy="330" r="42" fill="#1E3A8A"/>
+  <rect x="500" y="380" width="220" height="120" rx="58" fill="#1E3A8A"/>
+  <text x="150" y="120" fill="#0F172A" font-size="52" font-family="Noto Sans Devanagari, sans-serif" font-weight="800">सुरक्षित कुटुंब, सुरक्षित भविष्य</text>
+  <text x="150" y="180" fill="#475569" font-size="32" font-family="Noto Sans Devanagari, sans-serif">AI-शैली पोस्टर • विमा जनजागृती</text>
+</svg>
